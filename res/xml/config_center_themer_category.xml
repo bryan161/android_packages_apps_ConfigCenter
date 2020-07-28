@@ -15,10 +15,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="theme_customization_category_baseless"
+        android:title="@string/themes_baseful_accusations" >
+
         <ListPreference
             android:key="android.theme.customization.primary_color"
             android:icon="@drawable/ic_base_theme"
             android:title="@string/theme_customization_primary_title"/>
+
+        <com.exui.config.center.preferences.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="@string/volume_panel_aosp_val" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="theme_customization_category_base"
@@ -49,6 +62,13 @@
             android:key="android.theme.customization.adaptive_icon_shape"
             android:title="@string/theme_customization_adaptive_title"
             android:icon="@drawable/ic_icon_shape" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="theme_customization_category_fonts"
+        android:title="@string/theme_customization_fontie_title" >
 
         <ListPreference
             android:layout="@layout/fonts_base_preview"
