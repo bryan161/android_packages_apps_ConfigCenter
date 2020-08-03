@@ -524,4 +524,8 @@
     <string name="ambient_battery_percent_title">Battery level on bottom</string>
     <string name="ambient_battery_percent_summary">Enable to show battery percent while dozing</string>
 
+    <string name="theme_customization_sysui_icon_title">SystemUI overlays</string>
+    <string name="theme_customization_settings_icon_title">Settings overlays</string>
+    <string name="theme_customization_primary_title">Base Theme</string>
+
 </resources>
