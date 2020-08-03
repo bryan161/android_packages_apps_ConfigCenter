@@ -526,6 +526,12 @@
 
     <string name="theme_customization_sysui_icon_title">SystemUI overlays</string>
     <string name="theme_customization_settings_icon_title">Settings overlays</string>
-    <string name="theme_customization_primary_title">Base Theme</string>
+    <string name="theme_customization_primary_title">Base theme</string>
+    <string name="theme_customization_adaptive_title">Adaptive icons</string>
+    <string name="theme_customization_fontie_title">Fonts</string>
+    <string name="accent_color_rgb_picker">Custom accents</string>
+    <string name="themes_baseless_accusations">User Interface</string>
+
+
 
 </resources>
