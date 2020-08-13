@@ -28,6 +28,7 @@
             android:key="systemui_plugin_volume"
             android:title="@string/volume_panel"
             android:entries="@array/volume_panel_entries"
+            android:icon="@drawable/ic_volume_tone"
             android:entryValues="@array/volume_panel_values"
             android:defaultValue="@string/volume_panel_aosp_val" />
 

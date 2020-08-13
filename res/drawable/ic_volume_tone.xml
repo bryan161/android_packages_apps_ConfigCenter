@@ -9,5 +9,5 @@
         android:pathData="M0 0h24v24H0z" />
     <path
         android:fillColor="?android:attr/colorAccent"
-        android:pathData="M18 4V3c0-0.55-0.45-1-1-1H5c-0.55 0-1 0.45-1 1v4c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V6h1v4H9v11c0 0.55 0.45 1 1 1h2c0.55 0 1-0.45 1-1v-9h8V4h-3z" />
+        android:pathData="M12 3v10.55c-0.59-0.34-1.27-0.55-2-0.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
 </vector>
