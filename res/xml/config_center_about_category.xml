@@ -135,6 +135,11 @@
             android:summary="Xiaomi Redmi Note 8/8T  Maintainer">
         </Preference>             
 
+           <Preference
+            android:title="san9"
+            android:summary="Xiaomi Redmi K20 Pro / Mi 9T Pro  Maintainer">
+        </Preference> 
+
     </PreferenceCategory>
 
 </PreferenceScreen>
