@@ -297,7 +297,7 @@
 
     <!-- screen off FOD -->
     <string name="scr_off_fod">Screen off FOD</string>
-    <string name="scr_off_fod_summary">Use FOD while screen is off (May not work on some devices)</string>
+    <string name="scr_off_fod_summary">Use FOD while screen is off (Do not turn off always on display)</string>
 
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>
@@ -539,7 +539,7 @@
 
     <!--  Volume Panel Plugin   -->
     <string name="volume_panel">Volume Panel Style</string>
-    <string name="volume_panel_aosp">AOSP</string>
+    <string name="volume_panel_aosp">Paranoid Android</string>
     <string name="volume_panel_compact">Compact</string>
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Tiled</string>
