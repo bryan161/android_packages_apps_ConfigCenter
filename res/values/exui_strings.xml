@@ -294,6 +294,8 @@
     <string name="fod_recog_animation_miui_aurora">MIUI Aurora</string>
     <string name="fod_recog_animation_miui_whirlwind">BlackShark Whirlwind</string>
     <string name="fod_recog_animation_miui_nebula">BlackShark Nebula</string>
+    <string name="fod_recog_animation_realmecloud">Realme Cloud</string>
+    <string name="fod_recog_animation_realmeripple">Realme Ripple</string>
 
     <!-- screen off FOD -->
     <string name="scr_off_fod">Screen off FOD</string>
