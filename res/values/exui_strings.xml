@@ -297,10 +297,6 @@
     <string name="fod_recog_animation_realmecloud">Realme Cloud</string>
     <string name="fod_recog_animation_realmeripple">Realme Ripple</string>
 
-    <!-- screen off FOD -->
-    <string name="scr_off_fod">Screen off FOD</string>
-    <string name="scr_off_fod_summary">Use FOD while screen is off (Do not turn off always on display)</string>
-
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>
 
@@ -468,9 +464,6 @@
     <string name="statusbar_settings_category">Status Bar</string>
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
     <string name="use_old_mobiletype_summary">Merge signal and type icons (Requires a SystemUI restart)</string>
-
-    <string name="screen_off_fod_icon_title">Show icon</string>
-    <string name="screen_off_fod_icon_summary">Show fingerprint icon when the screen is off</string>
 
     <string name="force_extended_summary">Force extended volume panel for certain streams</string>
 
