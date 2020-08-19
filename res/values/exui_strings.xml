@@ -19,7 +19,7 @@
     <string name="lockscreen_category">Lockscreen</string>
     <string name="uituner_category">UI Tuner</string>
     <string name="notifications_category">Notifications</string>
-    <string name="navigation_category">Navigation</string>
+    <string name="navigation_category">Navigation and Buttons</string>
     <string name="about_category">About</string>
     <string name="default_string">Default</string>
 
@@ -373,7 +373,7 @@
     <string name="torch_power_button_gesture_dt_toast">Jump to camera gesture is now disabled</string>
     <string name="torch_power_button_gesture_lp">Long press power button to enable torch</string>
 
-    <string name="brightness_slider_qs_unexpanded">MIUI style brightness slider (beta)</string>
+    <string name="brightness_slider_qs_unexpanded">MIUI-style brightness slider</string>
     <string name="brightness_slider_qs_unexpanded_summary">Shows brightness slider below QS panel</string>
 
     <string name="qs_bg_use_new_tint">Tint the QS tiles</string>
