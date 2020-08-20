@@ -15,6 +15,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+       <Preference
+          android:summary="@string/themer_warner_summary"
+          android:selectable="false"/>
+
     <PreferenceCategory
         android:key="theme_customization_category_baseless"
         android:title="@string/themes_baseful_accusations" >
