@@ -19,6 +19,51 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 	
     <PreferenceCategory
+        android:key="interface_category"
+        android:title="@string/interface_category">
+
+        <Preference
+            android:key="themer_category"
+            android:summary="@string/theme_desc"
+            android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
+            android:title="@string/themer_category" />
+
+    <com.exui.config.center.preferences.SystemSettingIntListPreference
+        android:key="theming_settings_dashboard_icons"
+        android:title="@string/theming_settings_dashboard_icons_title"
+        android:entries="@array/theming_settings_dashboard_icons_entries"
+        android:entryValues="@array/theming_settings_dashboard_icons_values"
+        android:defaultValue="0" />
+	    
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="settings_spacer"
+            android:title="@string/enable_oneui"
+            android:summary="@string/enable_oneui_summary"
+            android:defaultValue="true" />	    
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="settings_suggestion_cards"
+            android:title="@string/settings_suggestions"
+            android:summary="@string/settings_suggestions_summary"
+            android:defaultValue="false" />
+
+	<com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="notification_headers"
+            android:title="@string/notification_headers_title"
+            android:summary="@string/notification_headers_summary"
+            android:defaultValue="true" />
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="synthos_center_notification_headers"
+            android:title="@string/synthos_center_notification_headers_title"
+            android:summary="@string/synthos_center_notification_headers_summary"
+            android:dependency="notification_headers"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
         android:key="qs_category"
         android:title="@string/qs_category">
 
@@ -136,49 +181,4 @@
             android:defaultValue="4"
             settings:units="" />
         </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="interface_category"
-        android:title="@string/interface_category">
-
-        <Preference
-            android:key="themer_category"
-            android:summary="@string/theme_desc"
-            android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
-            android:title="@string/themer_category" />
-
-    <com.exui.config.center.preferences.SystemSettingIntListPreference
-        android:key="theming_settings_dashboard_icons"
-        android:title="@string/theming_settings_dashboard_icons_title"
-        android:entries="@array/theming_settings_dashboard_icons_entries"
-        android:entryValues="@array/theming_settings_dashboard_icons_values"
-        android:defaultValue="0" />
-	    
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="settings_spacer"
-            android:title="@string/enable_oneui"
-            android:summary="@string/enable_oneui_summary"
-            android:defaultValue="true" />	    
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="settings_suggestion_cards"
-            android:title="@string/settings_suggestions"
-            android:summary="@string/settings_suggestions_summary"
-            android:defaultValue="false" />
-
-	<com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="notification_headers"
-            android:title="@string/notification_headers_title"
-            android:summary="@string/notification_headers_summary"
-            android:defaultValue="true" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="synthos_center_notification_headers"
-            android:title="@string/synthos_center_notification_headers_title"
-            android:summary="@string/synthos_center_notification_headers_summary"
-            android:dependency="notification_headers"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
