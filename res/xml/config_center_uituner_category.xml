@@ -22,12 +22,6 @@
         android:key="interface_category"
         android:title="@string/interface_category">
 
-        <Preference
-            android:key="themer_category"
-            android:summary="@string/theme_desc"
-            android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
-            android:title="@string/themer_category" />
-
     <com.exui.config.center.preferences.SystemSettingIntListPreference
         android:key="theming_settings_dashboard_icons"
         android:title="@string/theming_settings_dashboard_icons_title"

@@ -445,7 +445,7 @@
     <string name="notification_summary">Adjust LEDs and notification behavior</string>
     <string name="navigation_summary">Customize navigation bar style and behavior as well as some physical buttons</string>
     <string name="advanced_summary">Misc and extra system settings</string>
-    <string name="uituney_summary">Pimp your device with awesome theme options</string>
+    <string name="uituney_summary">Pimp your device with awesome UI options</string>
     <string name="about_summary">Some info about us, just in case you\'re curious about it</string>
     <string name="lockscreen_summary">Customize lockscreen layout and options</string>
     <string name="baffrey_summary">Battery bar and battery styles</string>
