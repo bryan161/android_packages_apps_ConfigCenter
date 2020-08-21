@@ -17,4 +17,126 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_title" >
 
+    <PreferenceCategory
+        android:key="quicksettings_blur"
+        android:title="@string/uituner_blur">
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="qs_blur"
+            android:title="@string/blur_quicksettings"
+            android:summary="@string/blur_quicksettings_subtitle"
+            android:defaultValue="true" />
+
+    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+       android:key="qs_blur_alpha"
+       android:title="@string/qs_blur_alpha_title"
+       android:summary="@string/qs_blur_alpha_summary"
+       android:max="100"
+       settings:min="1"
+       android:defaultValue="100"
+       settings:units="%"
+       android:dependency="qs_blur" />
+
+    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+       android:key="qs_blur_intensity"
+       android:title="@string/qs_blur_intensity_title"
+       android:summary="@string/qs_blur_intensity_summary"
+       android:max="100"
+       settings:min="1"
+       settings:units="%"
+       android:defaultValue="100"
+       android:persistent="false"
+       android:dependency="qs_blur" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="qs_columns_rows_category"
+        android:title="@string/qs_columns_rows_category_title">
+
+        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="qs_rows_portrait"
+            android:title="@string/qs_rows_portrait_title"
+            android:max="5"
+            android:min="1"
+            android:defaultValue="3"
+            settings:units="" />
+
+        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="qs_rows_landscape"
+            android:title="@string/qs_rows_landscape_title"
+            android:max="5"
+            android:min="1"
+            android:defaultValue="1"
+            settings:units="" />
+
+        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="qs_columns_portrait"
+            android:title="@string/qs_columns_portrait_title"
+            android:max="7"
+            android:min="1"
+            android:defaultValue="4"
+            settings:units="" />
+
+        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="qs_columns_landscape"
+            android:title="@string/qs_columns_landscape_title"
+            android:max="9"
+            android:min="1"
+            android:defaultValue="4"
+            settings:units="" />
+        </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="clear_allsub_category"
+        android:title="@string/clear_all_cat">
+
+    <com.exui.config.center.preferences.SystemSettingSwitchPreference
+        android:key="dismiss_all_button"
+        android:title="@string/enable_clear_all_button"
+        android:summary="@string/enable_clear_all_button_summary"
+        android:defaultValue="false" />
+
+    <com.exui.config.center.preferences.SystemSettingListPreference
+        android:key="notif_bg_color_mode"
+        android:title="@string/notif_bg_color_mode_title"
+        android:entries="@array/notif_bg_color_mode_entries"
+        android:entryValues="@array/notif_bg_color_mode_values"
+        android:dependency="dismiss_all_button"
+        android:defaultValue="0" />
+
+     <com.exui.config.center.preferences.SystemSettingColorPickerPreference
+        android:key="notif_bg_color"
+        android:title="@string/notif_bg_color_title"
+        android:dependency="dismiss_all_button"
+        android:defaultValue="0x3980FF" />
+
+    <com.exui.config.center.preferences.SystemSettingListPreference
+        android:key="notif_icon_color_mode"
+        android:title="@string/notif_icon_color_mode_title"
+        android:entries="@array/notif_bg_color_mode_entries"
+        android:entryValues="@array/notif_bg_color_mode_values"
+        android:dependency="dismiss_all_button"
+        android:defaultValue="0" />
+
+     <com.exui.config.center.preferences.SystemSettingColorPickerPreference
+        android:key="notif_icon_color"
+        android:title="@string/notif_icon_color_title"
+        android:dependency="dismiss_all_button"
+        android:defaultValue="0x3980FF" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc_qs_subcat"
+        android:title="@string/misc_category">
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="qs_datausage"
+            android:title="@string/qs_datausage_title"
+            android:summary="@string/qs_datausage_subtitle"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

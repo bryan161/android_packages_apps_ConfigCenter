@@ -79,56 +79,17 @@
             android:summary="@string/brightness_slider_qs_unexpanded_summary"
             android:defaultValue="false" />
 
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="dismiss_all_button"
-            android:title="@string/enable_clear_all_button"
-            android:summary="@string/enable_clear_all_button_summary"
-            android:defaultValue="true" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="qs_datausage"
-            android:title="@string/qs_datausage_title"
-            android:summary="@string/qs_datausage_subtitle"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="uituner_blur"
         android:title="@string/uituner_blur">
 
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="qs_blur"
-            android:title="@string/blur_quicksettings"
-            android:summary="@string/blur_quicksettings_subtitle"
-            android:defaultValue="true" />
-
     <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="blur_powermenu_background"
             android:title="@string/blur_powermenu_title"
             android:summary="@string/blur_powermenu_summary"
             android:defaultValue="false" />
-
-    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-       android:key="qs_blur_alpha"
-       android:title="@string/qs_blur_alpha_title"
-       android:summary="@string/qs_blur_alpha_summary"
-       android:max="100"
-       settings:min="1"
-       android:defaultValue="100"
-       settings:units="%"
-       android:dependency="qs_blur" />
-
-    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-       android:key="qs_blur_intensity"
-       android:title="@string/qs_blur_intensity_title"
-       android:summary="@string/qs_blur_intensity_summary"
-       android:max="100"
-       settings:min="1"
-       settings:units="%"
-       android:defaultValue="100"
-       android:persistent="false"
-       android:dependency="qs_blur" />
 
     <com.exui.config.center.preferences.SystemSettingSeekBarPreference
             android:key="powermenu_background_blur_intensity"
@@ -139,40 +100,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="qs_columns_rows_category"
-        android:title="@string/qs_columns_rows_category_title">
-
-        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-            android:key="qs_rows_portrait"
-            android:title="@string/qs_rows_portrait_title"
-            android:max="5"
-            android:min="1"
-            android:defaultValue="3"
-            settings:units="" />
-
-        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-            android:key="qs_rows_landscape"
-            android:title="@string/qs_rows_landscape_title"
-            android:max="5"
-            android:min="1"
-            android:defaultValue="1"
-            settings:units="" />
-
-        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-            android:key="qs_columns_portrait"
-            android:title="@string/qs_columns_portrait_title"
-            android:max="7"
-            android:min="1"
-            android:defaultValue="4"
-            settings:units="" />
-
-        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-            android:key="qs_columns_landscape"
-            android:title="@string/qs_columns_landscape_title"
-            android:max="9"
-            android:min="1"
-            android:defaultValue="4"
-            settings:units="" />
-        </PreferenceCategory>
 </PreferenceScreen>

@@ -42,10 +42,8 @@ public class UITunerFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "UITunerFragment";
-    private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
 
     private ContentResolver mResolver;
-    private SystemSettingSeekBarPreference mQsBlurIntensity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,22 +55,10 @@ public class UITunerFragment extends SettingsPreferenceFragment
 
         mResolver = getActivity().getContentResolver();
 
-        mQsBlurIntensity = (SystemSettingSeekBarPreference) findPreference(QS_BLUR_INTENSITY);
-        int qsBlurIntensity = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.QS_BLUR_INTENSITY, 100);
-        mQsBlurIntensity.setValue(qsBlurIntensity);
-        mQsBlurIntensity.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mQsBlurIntensity) {
-            Context mContext = getContext();
-            int value = (Integer) newValue;
-            Settings.System.putInt(mContext.getContentResolver(),
-                    Settings.System.QS_BLUR_INTENSITY, value);
-            return true;
-        }
         return false;
     }
 
