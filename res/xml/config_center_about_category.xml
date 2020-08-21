@@ -134,6 +134,11 @@
             android:title="san9"
             android:summary="Xiaomi Redmi K20 Pro / Mi 9T Pro  Maintainer">
         </Preference> 
+           
+           <Preference
+            android:title="Sinchan Dasgupta"
+            android:summary="Xiaomi Redmi 5 Plus / Redmi Note 5 (India) Maintainer">
+           </Preference>
 
     </PreferenceCategory>
 
