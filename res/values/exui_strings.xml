@@ -558,16 +558,7 @@
     <string name="themer_warner_summary">Certain options may take a few moments to properly be loaded or may require a SystemUI restart! Base themes will only work in dark theme.</string>
 
     <!-- QS battery estimates -->
-    <string name="qs_show_battery_estimate_title">Battery estimates</string>
-    <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon</string>
-
-    <string name="clear_all_cat">Notification clear all</string>
-    <string name="notif_bg_color_mode_title">Background color type</string>
-    <string name="notif_icon_color_mode_title">Icon color type</string>
-    <string name="notif_bg_color_title">Background color</string>
-    <string name="notif_icon_color_title">Icon color</string>
-    <string name="rr_default_bg">Default (system background)</string>
-    <string name="rr_accent_bg">Accent</string>
-    <string name="rr_custom_bg">Custom</string>
+    <string name="qs_show_battery_estimate_title">Battery estimates in QS</string>
+    <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon (Needs a SystemUI restart)</string>
 
 </resources>

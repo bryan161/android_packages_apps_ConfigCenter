@@ -89,47 +89,14 @@
         </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="clear_allsub_category"
-        android:title="@string/clear_all_cat">
+        android:key="misc_qs_subcat"
+        android:title="@string/misc_category">
 
     <com.exui.config.center.preferences.SystemSettingSwitchPreference
         android:key="dismiss_all_button"
         android:title="@string/enable_clear_all_button"
         android:summary="@string/enable_clear_all_button_summary"
         android:defaultValue="false" />
-
-    <com.exui.config.center.preferences.SystemSettingListPreference
-        android:key="notif_bg_color_mode"
-        android:title="@string/notif_bg_color_mode_title"
-        android:entries="@array/notif_bg_color_mode_entries"
-        android:entryValues="@array/notif_bg_color_mode_values"
-        android:dependency="dismiss_all_button"
-        android:defaultValue="0" />
-
-     <com.exui.config.center.preferences.SystemSettingColorPickerPreference
-        android:key="notif_bg_color"
-        android:title="@string/notif_bg_color_title"
-        android:dependency="dismiss_all_button"
-        android:defaultValue="0x3980FF" />
-
-    <com.exui.config.center.preferences.SystemSettingListPreference
-        android:key="notif_icon_color_mode"
-        android:title="@string/notif_icon_color_mode_title"
-        android:entries="@array/notif_bg_color_mode_entries"
-        android:entryValues="@array/notif_bg_color_mode_values"
-        android:dependency="dismiss_all_button"
-        android:defaultValue="0" />
-
-     <com.exui.config.center.preferences.SystemSettingColorPickerPreference
-        android:key="notif_icon_color"
-        android:title="@string/notif_icon_color_title"
-        android:dependency="dismiss_all_button"
-        android:defaultValue="0x3980FF" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="misc_qs_subcat"
-        android:title="@string/misc_category">
 
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="qs_datausage"

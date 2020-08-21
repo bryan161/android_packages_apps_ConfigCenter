@@ -43,17 +43,9 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
 
     public static final String TAG = "QuickSettingsFragment";
     private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
-    private static final String BG_COLOR = "notif_bg_color";
-    private static final String ICON_COLOR = "notif_icon_color";
-    private static final String BG_MODE = "notif_bg_color_mode";
-    private static final String ICON_MODE = "notif_icon_color_mode";
 
     private ContentResolver mResolver;
     private SystemSettingSeekBarPreference mQsBlurIntensity;
-    private SystemSettingListPreference mBgMode;
-    private SystemSettingListPreference mIconMode;
-    private SystemSettingColorPickerPreference mBgColor;
-    private SystemSettingColorPickerPreference mIconColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,41 +62,6 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
         mQsBlurIntensity.setValue(qsBlurIntensity);
         mQsBlurIntensity.setOnPreferenceChangeListener(this);
 
-        int color = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.NOTIF_CLEAR_ALL_BG_COLOR, 0x3980FF) ;
-
-        int iconColor = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.NOTIF_CLEAR_ALL_ICON_COLOR, 0x3980FF);
-
-        int mode = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.NOTIF_DISMISALL_COLOR_MODE, 0);
-
-        int iconmode = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.NOTIF_DISMISALL_ICON_COLOR_MODE, 0);
-
-        mBgMode = (SystemSettingListPreference) findPreference(BG_MODE);
-        mBgMode.setOnPreferenceChangeListener(this);
-
-        mBgColor = (SystemSettingColorPickerPreference) findPreference(BG_COLOR);
-        mBgColor.setNewPreviewColor(color);
-        mBgColor.setAlphaSliderEnabled(false);
-        String Hex = convertToRGB(color);
-        mBgColor.setSummary(Hex);
-        mBgColor.setOnPreferenceChangeListener(this);
-
-        mIconMode = (SystemSettingListPreference) findPreference(ICON_MODE);
-        mIconMode.setOnPreferenceChangeListener(this);
-
-        mIconColor = (SystemSettingColorPickerPreference) findPreference(ICON_COLOR);
-        mIconColor.setNewPreviewColor(iconColor);
-        String Hex2 = convertToRGB(iconColor);
-        mIconColor.setAlphaSliderEnabled(false);
-        mIconColor.setSummary(Hex2);
-        mIconColor.setOnPreferenceChangeListener(this);
-
-        updateprefs(mode);
-        updateIconprefs(iconmode);
-
     }
 
     @Override
@@ -115,40 +72,8 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.QS_BLUR_INTENSITY, value);
             return true;
-        } else if (preference == mBgMode) {
-             int value = Integer.parseInt((String) newValue);
-             updateprefs(value);
-             return true;
-        } else if (preference == mIconMode) {
-             int value = Integer.parseInt((String) newValue);
-             updateIconprefs(value);
-             return true;
-        } else if (preference == mBgColor) {
-             String hex = convertToRGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-             preference.setSummary(hex);
-             return true;
-        } else if (preference == mIconColor) {
-             String hex = convertToRGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-             preference.setSummary(hex);
-             return true;
         } 
         return false;
-    }
-
-    private void updateprefs(int mode) {
-        if (mode == 2)
-            mBgColor.setEnabled(true);
-        else 
-            mBgColor.setEnabled(false);
-    }
-
-    private void updateIconprefs(int mode) {
-        if (mode == 2)
-            mIconColor.setEnabled(true);
-        else 
-            mIconColor.setEnabled(false);
     }
 
     @Override
@@ -156,23 +81,4 @@ public class QuickSettingsFragment extends SettingsPreferenceFragment
         return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
 
-    public static String convertToRGB(int color) {
-        String red = Integer.toHexString(Color.red(color));
-        String green = Integer.toHexString(Color.green(color));
-        String blue = Integer.toHexString(Color.blue(color));
-
-        if (red.length() == 1) {
-            red = "0" + red;
-        }
-
-        if (green.length() == 1) {
-            green = "0" + green;
-        }
-
-        if (blue.length() == 1) {
-            blue = "0" + blue;
-        }
-
-        return "#" + red + green + blue;
-    }
 } 
