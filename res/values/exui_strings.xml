@@ -22,6 +22,9 @@
     <string name="navigation_category">Navigation and Buttons</string>
     <string name="about_category">About</string>
     <string name="default_string">Default</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
+
 
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>

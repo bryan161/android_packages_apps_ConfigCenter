@@ -32,6 +32,7 @@
     <color name="oval_uituner">#30fa6dff</color>
     <color name="oval_statusbar">#306fdb3d</color>
     <color name="oval_themeengine">#30FFFF00</color>
+    <color name="oval_quicksettings">#30fa6dff</color>
 
     <!-- Previews -->
     <color name="preview_container_border">#ECECEC</color>

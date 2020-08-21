@@ -26,6 +26,13 @@
         android:icon="@drawable/ic_statusbar_background" />
 
     <Preference
+        android:key="quicksettings_category"
+        android:fragment="com.exui.config.center.fragments.QuickSettingsFragment"
+        android:title="@string/quicksettings_title"
+        android:summary="@string/quicksettings_summary"
+        android:icon="@drawable/ic_quicksettings_background" />
+
+    <Preference
         android:key="lockscreen_category"
         android:fragment="com.exui.config.center.fragments.LockscreenFragment"
         android:title="@string/lockscreen_category"
