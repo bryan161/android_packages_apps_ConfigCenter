@@ -282,6 +282,7 @@
         <item>@string/fod_recog_animation_miui_normal</item>
         <item>@string/fod_recog_animation_miui_aod</item>
         <item>@string/fod_recog_animation_miui_light</item>
+        <item>@string/fod_recog_animation_miui_neon</item>
         <item>@string/fod_recog_animation_miui_pop</item>
         <item>@string/fod_recog_animation_miui_pulse</item>
         <item>@string/fod_recog_animation_miui_pulse_white</item>
@@ -311,6 +312,7 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>25</item>
         <item>4</item>
         <item>5</item>
         <item>6</item>

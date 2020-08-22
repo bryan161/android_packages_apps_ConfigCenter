@@ -277,6 +277,7 @@
     <string name="fod_recog_animation_miui_normal">MIUI Default</string>
     <string name="fod_recog_animation_miui_aod">MIUI AOD</string>
     <string name="fod_recog_animation_miui_light">MIUI Light</string>
+    <string name="fod_recog_animation_miui_neon">MIUI Neon</string>
     <string name="fod_recog_animation_miui_pop">MIUI Pop</string>
     <string name="fod_recog_animation_miui_pulse">MIUI Pulse</string>
     <string name="fod_recog_animation_miui_pulse_white">MIUI Pulse (White)</string>
