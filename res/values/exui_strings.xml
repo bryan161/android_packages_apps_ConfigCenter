@@ -282,6 +282,8 @@
     <string name="fod_recog_animation_miui_pulse">MIUI Pulse</string>
     <string name="fod_recog_animation_miui_pulse_white">MIUI Pulse (White)</string>
     <string name="fod_recog_animation_miui_rhythm">MIUI Rhythm</string>
+    <string name="fod_recog_animation_miui_star_cas">MIUI Starlight</string>
+    <string name="fod_recog_animation_miui_aurora_cas">MIUI Tornado</string>
     <string name="fod_recog_animation_op_cosmos">OnePlus Cosmos</string>
     <string name="fod_recog_animation_op_mclaren">OnePlus McLaren</string>
     <string name="fod_recog_animation_pureview_future">PureView Future</string>
