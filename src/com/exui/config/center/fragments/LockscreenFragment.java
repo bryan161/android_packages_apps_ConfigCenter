@@ -24,6 +24,7 @@ import android.os.SystemProperties;
 import android.provider.Settings;
 import androidx.preference.*;
 import android.hardware.fingerprint.FingerprintManager;
+import com.exui.config.center.lockscreen.LockScreenVisualizer;
 
 import com.android.internal.logging.nano.MetricsProto; 
 
@@ -82,6 +83,11 @@ public class LockscreenFragment extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        LockScreenVisualizer.reset(mContext);
     }
 
     @Override
