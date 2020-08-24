@@ -564,4 +564,8 @@
     <string name="qs_show_battery_estimate_title">Battery estimates in QS</string>
     <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon (Needs a SystemUI restart)</string>
 
+    <!-- Lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">Visualizer</string>
+    <string name="lockscreen_visualizer_summary">Toggles visualizer display on lockscreen</string>
+
 </resources>
