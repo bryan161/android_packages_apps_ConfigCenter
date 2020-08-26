@@ -46,7 +46,7 @@
             android:icon="@drawable/telegram_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/shapeshiftoschat"/>
+                android:data="https://t.me/shapeshiftos"/>
         </Preference>
 
         <Preference
@@ -117,22 +117,22 @@
 
           <Preference
             android:title="James Phạm"
-            android:summary="Xiaomi Redmi Note 5 Pro  Maintainer">
+            android:summary="Xiaomi Redmi Note 5 Pro Maintainer">
         </Preference>   
 
            <Preference
             android:title="xK4m3l"
-            android:summary="Xiaomi Mi Mix 2S  Maintainer">
+            android:summary="Xiaomi Mi Mix 2S Maintainer">
         </Preference> 
   
            <Preference
             android:title="NitroFuNxD"
-            android:summary="Xiaomi Redmi Note 8/8T  Maintainer">
+            android:summary="Xiaomi Redmi Note 8/8T Maintainer">
         </Preference>             
 
            <Preference
             android:title="san9"
-            android:summary="Xiaomi Redmi K20 Pro / Mi 9T Pro  Maintainer">
+            android:summary="Xiaomi Redmi K20 Pro / Mi 9T Pro Maintainer">
         </Preference> 
            
            <Preference
