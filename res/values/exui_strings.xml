@@ -623,4 +623,8 @@
     <string name="donut_coffee_summary">If you liked the work on this ROM</string>
     <string name="donut_coffee_title">Donate</string>
 
+    <!-- Pin ripple -->
+    <string name="lockscreen_pin_ripple_title">Lockscreen Pin Ripple</string>
+    <string name="lockscreen_pin_ripple_summary">Disable to remove ripple when entering pin numbers</string>
+
 </resources>
