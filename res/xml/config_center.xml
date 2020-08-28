@@ -76,7 +76,7 @@
 
     <Preference
         android:key="about_category"
-        android:fragment="com.exui.config.center.fragments.AboutFragment"
+        android:fragment="com.exui.config.center.fragments.About"
         android:title="@string/about_category"
         android:summary="@string/about_summary"
         android:icon="@drawable/ic_information_background" />

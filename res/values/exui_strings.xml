@@ -163,14 +163,34 @@
     <string name="lights_notifications_subcat">Lights</string>
 
     <!-- About section -->
-    <string name="downloads_title">Downloads</string>
-    <string name="downloads_summary">Place where you will find newest builds for all officially supported devices</string>
-    <string name="telegram_channel">News channel</string>
-    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the ROM</string>
-    <string name="telegram_chat">Support chat</string>
-    <string name="telegram_chat_summary">Telegram chat where we provide support for this rom</string>
-    <string name="donation_link">Donations</string>
-    <string name="donation_link_summary">If you like the rom and want to help buy us a coffee</string>
+    <string name="about_team_category">Our Team</string>
+    <string name="about_external_category">External Links</string>
+    <string name="about_dev_title">Lead Developer</string>
+    <string name="about_dev_name">Ashutosh Sundresh</string>
+    <string name="about_dev_git" translatable="false">https://github.com/AshutoshSundresh</string>
+    <string name="about_mote_title">ExtendedUI Developer</string>
+    <string name="about_mote_name">00day0</string>
+    <string name="about_mote_git" translatable="false">https://github.com/00day0</string>
+    <string name="about_des_title">Graphics</string>
+    <string name="about_des_name">MezzLasha</string>
+    <string name="about_des_git" translatable="false">https://github.com/MezzLasha</string>
+    <string name="tg_channel_title">Telegram Channel</string>
+    <string name="tg_channel_summary">Visit our channel for source updates</string>
+    <string name="tg_channel_link" translatable="false">https://t.me/shapeshiftoschannel</string>
+    <string name="tg_chat_title">Telegram Group</string>
+    <string name="tg_chat_summary">Official, Global Telegram Group</string>
+    <string name="tg_chat_link" translatable="false">https://t.me/shapeshiftos</string>
+    <string name="tg_ot_title">Off Topic Telegram Group</string>
+    <string name="tg_ot_summary">A place to spam your GIFs and memes</string>
+    <string name="tg_ot_link" translatable="false">https://t.me/shapeshiftot</string>
+    <string name="about_git_title">ROM Source Code</string>
+    <string name="about_git_summary">View our source on GitHub</string>
+    <string name="about_git_link" translatable="false">https://github.com/ShapeShiftOS</string>
+    <string name="about_devices_git_title">Devices Source Code</string>
+    <string name="about_devices_git_summary">View our device sources on GitHub</string>
+    <string name="about_devices_git_link" translatable="false">https://github.com/ShapeShiftOS-Devices</string>
+    <string name="about_phone_title">About Phone</string>
+    <string name="about_phone_summary">Open the system\'s about page</string>
     
     <!-- App Title -->
     <string name="config_center_title">ShapeShifter</string>
