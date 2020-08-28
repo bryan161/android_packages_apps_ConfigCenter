@@ -18,5 +18,5 @@
         android:height="166dp" />
     <stroke android:width="2dp"
         android:color="@color/preview_container_border" />
-    <corners android:radius="8dp" />
+    <corners android:radius="@*android:dimen/config_dialogCornerRadius" />
 </shape>
