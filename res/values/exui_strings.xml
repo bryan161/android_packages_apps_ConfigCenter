@@ -618,4 +618,9 @@
     <string name="the_drill_title">The Drill</string>
     <string name="the_drill_summary">Found a bug? Ran into an issue?</string>
 
+    <!-- More links -->
+    <string name="magisk_summary">Download the latest stable Magisk installer</string>
+    <string name="donut_coffee_summary">If you liked the work on this ROM</string>
+    <string name="donut_coffee_title">Donate</string>
+
 </resources>
