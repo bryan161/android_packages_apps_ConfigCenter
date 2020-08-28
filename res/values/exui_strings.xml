@@ -163,6 +163,9 @@
     <string name="lights_notifications_subcat">Lights</string>
 
     <!-- About section -->
+    <string name="maintainer">Device Maintainer</string>
+    <string name="maintainer_name" translatable="false">Ashutosh Sundresh</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/shapeshiftos</string>
     <string name="about_team_category">Our Team</string>
     <string name="about_external_category">External Links</string>
     <string name="about_dev_title">Lead Developer</string>
