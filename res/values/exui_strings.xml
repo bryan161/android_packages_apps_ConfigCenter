@@ -582,7 +582,7 @@
     <string name="fod_night_light_title">Disable night light when showing FOD</string>
     <string name="fod_night_light_summary">Disable night light when fingerprint is active. This is necessary for some devices that need correct colors for reading fingerprint. Disabling this might cause unreadable fingerprint on night light enabled. If this is enabled, everytime you are on auto night and you decide to disable it, FOD will re-enable night light on hiding</string>
 
-    <string name="themer_warner_summary">Certain options may take a few moments to properly be loaded or may require a SystemUI restart! Base themes will only work in dark theme.</string>
+    <string name="themer_warner_summary">Certain options may take a few moments to properly be loaded or may require a SystemUI restart!</string>
 
     <!-- QS battery estimates -->
     <string name="qs_show_battery_estimate_title">Battery estimates in QS</string>
