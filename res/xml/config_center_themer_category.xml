@@ -20,47 +20,6 @@
           android:selectable="false"/>
 
     <PreferenceCategory
-        android:key="theme_customization_category_baseless"
-        android:title="@string/themes_baseful_accusations" >
-
-        <com.android.settings.display.darkmode.DarkModePreference
-            android:key="dark_ui_mode"
-            android:title="@string/dark_ui_mode"
-            android:icon="@drawable/ic_moon"
-            android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
-            android:widgetLayout="@null"
-            settings:widgetLayout="@null"
-            settings:controller="com.android.settings.display.DarkUIPreferenceController"
-            settings:searchable="false"/>
-
-        <ListPreference
-            android:key="android.theme.customization.primary_color"
-            android:icon="@drawable/ic_base_theme"
-            android:dependency="dark_ui_mode"
-            android:title="@string/theme_customization_primary_title"/>
-
-        <com.exui.config.center.preferences.SystemSettingListPreference
-            android:key="systemui_plugin_volume"
-            android:title="@string/volume_panel"
-            android:entries="@array/volume_panel_entries"
-            android:icon="@drawable/ic_volume_tone"
-            android:entryValues="@array/volume_panel_values"
-            android:defaultValue="@string/volume_panel_aosp_val" />
-
-       <Preference
-        android:key="clock_style"
-        android:title="@string/clock_style_title"
-        android:summary="@string/clock_style_summary"
-        android:icon="@drawable/ic_clock_themer">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.android.wallpaper"
-            android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
-    </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="theme_customization_category_base"
         android:title="@string/themes_baseless_accusations" >
 
@@ -107,5 +66,49 @@
             android:icon="@drawable/ic_font"/>
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="theme_customization_category_baseless"
+        android:title="@string/themes_baseful_accusations" >
+
+        <ListPreference
+            android:layout="@layout/settings_icons_preview"
+            android:selectable="false" />
+
+        <com.android.settings.display.darkmode.DarkModePreference
+            android:key="dark_ui_mode"
+            android:title="@string/dark_ui_mode"
+            android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
+            android:widgetLayout="@null"
+            settings:widgetLayout="@null"
+            settings:controller="com.android.settings.display.DarkUIPreferenceController"
+            android:icon="@drawable/ic_moon"
+            settings:searchable="false"/>
+
+        <ListPreference
+            android:key="android.theme.customization.primary_color"
+            android:icon="@drawable/ic_base_theme"
+            android:title="@string/theme_customization_primary_title"
+            android:dependency="dark_ui_mode" />
+
+        <com.exui.config.center.preferences.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:icon="@drawable/ic_volume_tone"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="@string/volume_panel_aosp_val" />
+
+       <Preference
+        android:key="clock_style"
+        android:title="@string/clock_style_title"
+        android:summary="@string/clock_style_summary"
+        android:icon="@drawable/ic_clock_themer">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.android.wallpaper"
+            android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
+    </Preference>
+
 
 </PreferenceScreen>
