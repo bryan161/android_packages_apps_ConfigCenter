@@ -26,6 +26,7 @@
         <com.android.settings.display.darkmode.DarkModePreference
             android:key="dark_ui_mode"
             android:title="@string/dark_ui_mode"
+            android:icon="@drawable/ic_moon"
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             android:widgetLayout="@null"
             settings:widgetLayout="@null"
