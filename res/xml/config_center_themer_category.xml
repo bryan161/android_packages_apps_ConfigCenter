@@ -47,6 +47,17 @@
             android:entryValues="@array/volume_panel_values"
             android:defaultValue="@string/volume_panel_aosp_val" />
 
+       <Preference
+        android:key="clock_style"
+        android:title="@string/clock_style_title"
+        android:summary="@string/clock_style_summary"
+        android:icon="@drawable/ic_clock_themer">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.android.wallpaper"
+            android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
+    </Preference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

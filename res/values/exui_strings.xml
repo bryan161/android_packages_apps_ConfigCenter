@@ -584,6 +584,9 @@
 
     <string name="themer_warner_summary">Certain options may take a few moments to properly be loaded or may require a SystemUI restart!</string>
 
+    <string name="clock_style_title">Clock Styles</string>
+    <string name="clock_style_summary">Customize your lockscreen clock</string>
+
     <!-- QS battery estimates -->
     <string name="qs_show_battery_estimate_title">Battery estimates in QS</string>
     <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon (Needs a SystemUI restart)</string>
