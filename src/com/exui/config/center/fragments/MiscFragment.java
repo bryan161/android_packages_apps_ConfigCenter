@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceCategory;
@@ -34,6 +35,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.exui.config.center.preferences.AppMultiSelectListPreference;
 import com.exui.config.center.preferences.ScrollAppsViewPreference;
 
+import java.net.InetAddress;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,7 +50,9 @@ public class MiscFragment extends SettingsPreferenceFragment
     private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
+    private static final String PREF_ADBLOCK = "persist.adaway.hosts_block";
 
+    private Handler mHandler = new Handler();
     private ContentResolver mResolver;
 
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
@@ -68,6 +72,8 @@ public class MiscFragment extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             overallPreferences.removePreference(smartPixelsPref);
         }
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
 
         final PreferenceCategory aspectRatioCategory =
             (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
@@ -112,7 +118,19 @@ public class MiscFragment extends SettingsPreferenceFragment
             }
             return true;
         }
-        return false;
+        if (PREF_ADBLOCK.equals(preference.getKey())) {
+            // Flush the java VM DNS cache to re-read the hosts file.
+            // Delay to ensure the value is persisted before we refresh
+            mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        InetAddress.clearDnsCache();
+                    }
+            }, 1000);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
