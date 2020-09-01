@@ -48,7 +48,6 @@
     <string name="theming_settings_dashboard_icons_default_accent2">Accent background</string>
     <string name="theming_settings_dashboard_icons_plain">Plain</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Plain accent</string>
-    <string name="theming_settings_dashboard_icons_tinted">Tinted</string>
 
     <string name="clock_style_category_title">Clock Settings</string>
     <string name="clock_style_category_summary">Statusbar Clock Settings</string>
