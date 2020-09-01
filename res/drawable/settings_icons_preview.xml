@@ -30,7 +30,8 @@
             <item android:drawable="@*com.android.settings:drawable/ic_settings_wireless_white"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"/>
+                android:height="40dp"
+                android:color="#FFFFFFFF"/>
         </layer-list>
     </item>
     <item android:gravity="center">
@@ -44,7 +45,8 @@
             <item android:drawable="@*com.android.settings:drawable/ic_settings_location"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"/>
+                android:height="40dp"
+                android:color="#FFFFFFFF"/>                
         </layer-list>
     </item>
     <item android:gravity="right">
@@ -58,7 +60,8 @@
             <item android:drawable="@*com.android.settings:drawable/ic_settings_display_white"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"/>
+                android:height="40dp"
+                android:color="#FFFFFFFF"/>
         </layer-list>
     </item>
 </layer-list>
