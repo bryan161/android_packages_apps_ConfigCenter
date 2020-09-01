@@ -25,6 +25,7 @@ import android.provider.Settings;
 import androidx.preference.*;
 import android.hardware.fingerprint.FingerprintManager;
 import com.exui.config.center.lockscreen.LockScreenVisualizer;
+import com.android.internal.widget.LockPatternUtils;
 
 import com.android.internal.logging.nano.MetricsProto; 
 
@@ -37,10 +38,12 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
     public static final String TAG = "LockscreenFragment";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FP_KEYSTORE = "fp_unlock_keystore";
 
     private ContentResolver mResolver;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SystemSettingSwitchPreference mFingerprintUnlock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class LockscreenFragment extends SettingsPreferenceFragment
         PreferenceScreen prefScreen = getPreferenceScreen();
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("fod_category");
         mResolver = getActivity().getContentResolver();
+        mFingerprintUnlock = (SystemSettingSwitchPreference) findPreference(FP_KEYSTORE);
 
         boolean enableScreenOffFOD = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_supportScreenOffFod);
@@ -70,6 +74,16 @@ public class LockscreenFragment extends SettingsPreferenceFragment
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
+        }
+
+        if (mFingerprintUnlock != null) {
+           if (LockPatternUtils.isDeviceEncryptionEnabled()) {
+               mFingerprintUnlock.setEnabled(false);
+               mFingerprintUnlock.setSummary(R.string.fp_encrypt_warning);
+            } else {
+               mFingerprintUnlock.setEnabled(true);
+               mFingerprintUnlock.setSummary(R.string.fp_unlock_keystore_summary);
+            }
         }
 
     }

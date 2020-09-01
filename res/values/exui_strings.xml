@@ -532,7 +532,8 @@
 
     <!-- Fingerprint unlock keystore -->
     <string name="fp_unlock_keystore_title">Fingerprint unlock</string>
-    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot\nNote: Not recommended on encrypted devices!</string>
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot\nNote: At your own risk!</string>
+    <string name="fp_encrypt_warning">Unlock device with fingerprint after reboot\nNote: You are encrypted so you can\'t use this feature.</string>
 
     <!-- Force disable transition animation -->
     <string name="disable_transition_animations_title">Disable transition animations</string>
