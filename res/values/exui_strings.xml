@@ -209,6 +209,8 @@
     <string name="navbar_invert_layout_title">Invert layout</string>
     <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
     <string name="nav_bar_layout">Navbar layout</string>
+    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
+    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons in navigation bar while typing</string>
 
     <!-- Gestures -->
     <string name="gestures_category">Gestures</string>
