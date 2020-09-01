@@ -50,23 +50,6 @@
             android:icon="@drawable/ic_icon_shape" />
 
     </PreferenceCategory>
-
-
-    <PreferenceCategory
-        android:key="theme_customization_category_fonts"
-        android:title="@string/theme_customization_fontie_title" >
-
-        <ListPreference
-            android:layout="@layout/fonts_base_preview"
-            android:selectable="false" />
-
-        <ListPreference
-            android:key="android.theme.customization.font"
-            android:title="@string/theme_customization_fontie_title"
-            android:icon="@drawable/ic_font"/>
-
-    </PreferenceCategory>
-
     <PreferenceCategory
         android:key="theme_customization_category_baseless"
         android:title="@string/themes_baseful_accusations" >
@@ -110,5 +93,21 @@
             android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="theme_customization_category_fonts"
+        android:title="@string/theme_customization_fontie_title" >
+
+        <ListPreference
+            android:layout="@layout/fonts_base_preview"
+            android:selectable="false" />
+
+        <ListPreference
+            android:key="android.theme.customization.font"
+            android:title="@string/theme_customization_fontie_title"
+            android:icon="@drawable/ic_font"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
