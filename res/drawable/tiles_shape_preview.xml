@@ -27,7 +27,7 @@
                         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                             android:height="44dp"
                             android:width="44dp"
-                            android:color="#FF7272"/>
+                            android:color="@color/tile_shape_alpha"/>
                     </item>
                     <item android:drawable="@drawable/ic_preview_wifi"
                         android:width="26.4dp"
@@ -41,7 +41,7 @@
                         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                             android:height="44dp"
                             android:width="44dp"
-                            android:color="#72CCFF"/>
+                            android:color="@color/tile_shape_alpha"/>
                     </item>
                     <item android:drawable="@drawable/ic_preview_alien"
                         android:width="26.4dp"
@@ -59,7 +59,7 @@
                         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                             android:height="44dp"
                             android:width="44dp"
-                            android:color="#3372BBFF"/>
+                            android:color="@color/tile_shape_alpha"/>
                     </item>
                     <item android:drawable="@drawable/ic_preview_fluid"
                         android:width="26.4dp"
@@ -73,7 +73,7 @@
                         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                             android:height="44dp"
                             android:width="44dp"
-                            android:color="#33FFCF72"/>
+                            android:color="@color/tile_shape_alpha"/>
                     </item>
                     <item android:drawable="@drawable/ic_preview_moon"
                         android:width="26.4dp"

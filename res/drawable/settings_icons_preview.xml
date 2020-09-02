@@ -25,15 +25,12 @@
                 <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                     android:height="80dp"
                     android:width="80dp"
-                    android:color="@*com.android.settings:color/homepage_network_background"/>
+                    android:color="#30f12600"/>
             </item>
-            <item android:drawable="@*com.android.settings:drawable/ic_settings_wireless_white"
+            <item android:drawable="@drawable/themeengine_category_icon"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"
-                android:color="#FFFFFFFF"
-                android:tint="?android:attr/colorControlNormal"
-                android:fillColor="#FFFFFFFF"/>
+                android:height="40dp"/>
         </layer-list>
     </item>
     <item android:gravity="center">
@@ -42,15 +39,12 @@
                 <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                     android:height="80dp"
                     android:width="80dp"
-                    android:color="@*com.android.settings:color/homepage_location_background"/>
+                    android:color="#3084a7f4"/>
             </item>
-            <item android:drawable="@*com.android.settings:drawable/ic_settings_location"
+            <item android:drawable="@drawable/lockscreen_category_icon"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"
-                android:color="#FFFFFFFF"
-                android:tint="?android:attr/colorControlNormal"
-                android:fillColor="#FFFFFFFF"/>                
+                android:height="40dp"/>                
         </layer-list>
     </item>
     <item android:gravity="right">
@@ -59,15 +53,12 @@
                 <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                     android:height="80dp"
                     android:width="80dp"
-                    android:color="@*com.android.settings:color/homepage_display_background"/>
+                    android:color="#3031aa5c"/>
             </item>
-            <item android:drawable="@*com.android.settings:drawable/ic_settings_display_white"
+            <item android:drawable="@drawable/misc_category_icon"
                 android:gravity="center"
                 android:width="40dp"
-                android:height="40dp"
-                android:color="#FFFFFFFF"
-                android:tint="?android:attr/colorControlNormal"
-                android:fillColor="#FFFFFFFF"/>
+                android:height="40dp"/>
         </layer-list>
     </item>
 </layer-list>
