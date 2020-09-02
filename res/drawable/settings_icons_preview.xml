@@ -31,7 +31,9 @@
                 android:gravity="center"
                 android:width="40dp"
                 android:height="40dp"
-                android:color="#FFFFFFFF"/>
+                android:color="#FFFFFFFF"
+                android:tint="?android:attr/colorControlNormal"
+                android:fillColor="#FFFFFFFF"/>
         </layer-list>
     </item>
     <item android:gravity="center">
@@ -46,7 +48,9 @@
                 android:gravity="center"
                 android:width="40dp"
                 android:height="40dp"
-                android:color="#FFFFFFFF"/>                
+                android:color="#FFFFFFFF"
+                android:tint="?android:attr/colorControlNormal"
+                android:fillColor="#FFFFFFFF"/>                
         </layer-list>
     </item>
     <item android:gravity="right">
@@ -61,7 +65,9 @@
                 android:gravity="center"
                 android:width="40dp"
                 android:height="40dp"
-                android:color="#FFFFFFFF"/>
+                android:color="#FFFFFFFF"
+                android:tint="?android:attr/colorControlNormal"
+                android:fillColor="#FFFFFFFF"/>
         </layer-list>
     </item>
 </layer-list>
