@@ -26,6 +26,8 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.*;
+import com.exui.config.center.preferences.SystemPropStore;
+import com.exui.config.center.preferences.SystemPropSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto; 
 
@@ -57,8 +59,13 @@ public class MiscFragment extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final PreferenceScreen prefSet = getPreferenceScreen();
+
         addPreferencesFromResource(R.xml.config_center_misc_category);
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
+
+        final PreferenceScreen prefSet = getPreferenceScreen();
+
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
 
         boolean enableSmartPixels = getContext().getResources().
@@ -68,9 +75,6 @@ public class MiscFragment extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             overallPreferences.removePreference(smartPixelsPref);
         }
-
-        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
-
     }
 
     @Override
