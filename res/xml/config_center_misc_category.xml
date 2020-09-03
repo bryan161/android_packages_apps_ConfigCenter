@@ -45,9 +45,8 @@
         android:defaultValue="false"
         android:dependency="pocket_judge" />
 
-
-    <com.exui.config.center.preferences.SystemPropSwitchPreference
-        android:key="persist.adaway.hosts_block"
+   <com.exui.config.center.preferences.SystemPropSwitchPreference
+        android:key="persist.aicp.hosts_block"
         android:title="@string/hosts_block_title"
         android:summary="@string/hosts_block_summary"
         android:defaultValue="false" />

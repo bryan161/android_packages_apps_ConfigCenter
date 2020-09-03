@@ -48,7 +48,7 @@ public class MiscFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "MiscFragment";
-    private static final String PREF_ADBLOCK = "persist.adaway.hosts_block";
+    private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
 
     private Handler mHandler = new Handler();
     private ContentResolver mResolver;
@@ -62,8 +62,6 @@ public class MiscFragment extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.config_center_misc_category);
 
-        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
-
         final PreferenceScreen prefSet = getPreferenceScreen();
 
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
@@ -75,6 +73,8 @@ public class MiscFragment extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             overallPreferences.removePreference(smartPixelsPref);
         }
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
     }
 
     @Override
