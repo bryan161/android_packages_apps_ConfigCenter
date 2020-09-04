@@ -640,4 +640,11 @@
     <string name="hosts_block_title">Ad-blocking</string>
     <string name="hosts_block_summary">Block ads with a modified hosts file. Disable if using another ad blocker or if apps encounter issues.</string>
 
+    <string name="shapeshift_qs_sub">Quicksettings translucency</string>
+
+    <string name="shapeshift_qs_warner_summary">Set a value below 255 to get a redesigned QS layout. Set it back to 255 and restart system UI to get back stock QS.</string>
+
+    <!-- QS background opacity -->
+    <string name="qs_panel_alpha_title">QS background translucency (beta)</string>
+
 </resources>

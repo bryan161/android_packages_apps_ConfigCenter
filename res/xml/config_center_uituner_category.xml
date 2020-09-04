@@ -17,6 +17,25 @@
     android:title="@string/uituner_category"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:title="@string/shapeshift_qs_sub">
+
+       <Preference
+          android:summary="@string/shapeshift_qs_warner_summary"
+          android:selectable="false"/>
+
+        <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:max="255"
+            settings:min="100"
+            settings:interval="5"
+            android:defaultValue="255" />
+
+    </PreferenceCategory>
+
+
 	
     <PreferenceCategory
         android:key="interface_category"
