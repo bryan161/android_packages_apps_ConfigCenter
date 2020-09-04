@@ -25,7 +25,7 @@
                 <com.android.settingslib.widget.AdaptiveIconShapeDrawable
                     android:height="80dp"
                     android:width="80dp"
-                    android:color="#30f12600"/>
+                    android:color="#30e5173f"/>
             </item>
             <item android:drawable="@drawable/themeengine_category_icon"
                 android:gravity="center"
