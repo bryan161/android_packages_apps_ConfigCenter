@@ -52,6 +52,7 @@
         android:defaultValue="false" />
 
     </PreferenceCategory>
+
     <PreferenceCategory
         android:key="animations_sub"
         android:title="@string/animations_sub">

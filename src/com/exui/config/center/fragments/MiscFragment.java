@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2020 ExtendedReborn
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,26 +45,21 @@ import java.util.HashSet;
 import java.util.List;
 
 public class MiscFragment extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+            implements Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "MiscFragment";
     private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
 
     private Handler mHandler = new Handler();
-    private ContentResolver mResolver;
-
-    private AppMultiSelectListPreference mAspectRatioAppsSelect;
-    private ScrollAppsViewPreference mAspectRatioApps;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        final PreferenceScreen prefSet = getPreferenceScreen();
         addPreferencesFromResource(R.xml.config_center_misc_category);
 
-        final PreferenceScreen prefSet = getPreferenceScreen();
-
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
 
         boolean enableSmartPixels = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
@@ -73,8 +68,6 @@ public class MiscFragment extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             overallPreferences.removePreference(smartPixelsPref);
         }
-
-        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -98,4 +91,4 @@ public class MiscFragment extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
-} 
+}
