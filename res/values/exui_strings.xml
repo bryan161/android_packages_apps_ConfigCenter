@@ -327,6 +327,7 @@
     <string name="fod_recog_animation_miui_nebula">BlackShark Nebula</string>
     <string name="fod_recog_animation_realmecloud">Realme Cloud</string>
     <string name="fod_recog_animation_realmeripple">Realme Ripple</string>
+    <string name="fod_recog_animation_vivoendless">Vivo Endless</string>
 
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>
