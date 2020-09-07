@@ -307,6 +307,9 @@
         <item>@string/fod_recog_animation_miui_nebula</item>
         <item>@string/fod_recog_animation_realmecloud</item>
         <item>@string/fod_recog_animation_realmeripple</item>
+        <item>@string/fod_recog_animation_rogfusion</item>
+        <item>@string/fod_recog_animation_rogpulsar</item>
+        <item>@string/fod_recog_animation_rogsupernova</item>
         <item>@string/fod_recog_animation_vivoendless</item>
     </string-array>
 
@@ -339,7 +342,10 @@
         <item>22</item>
         <item>23</item>
         <item>24</item>
-        <item>28</item> 
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>28</item>
     </string-array>
 
     <!-- Battery bar -->
