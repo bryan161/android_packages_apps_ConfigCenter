@@ -47,9 +47,16 @@ import java.util.List;
 public class MiscFragment extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
-
+    public static final String TAG = "MiscFragment";
+    private static final String KEY_ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
+    private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
+    private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
+    private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
     private Handler mHandler = new Handler();
+    private ContentResolver mResolver;
+
+    private AppMultiSelectListPreference mAspectRatioAppsSelect;
+    private ScrollAppsViewPreference mAspectRatioApps;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,8 +66,6 @@ public class MiscFragment extends SettingsPreferenceFragment
 
         PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
 
-        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
-
         boolean enableSmartPixels = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
         Preference smartPixelsPref = (Preference) findPreference("smart_pixels");
@@ -68,23 +73,50 @@ public class MiscFragment extends SettingsPreferenceFragment
         if (!enableSmartPixels){
             overallPreferences.removePreference(smartPixelsPref);
         }
+
+        final PreferenceCategory aspectRatioCategory =
+            (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
+        final boolean supportMaxAspectRatio =
+            getResources().getBoolean(com.android.internal.R.bool.config_haveHigherAspectRatioScreen);
+        if (!supportMaxAspectRatio) {
+            getPreferenceScreen().removePreference(aspectRatioCategory);
+        } else {
+            mAspectRatioAppsSelect =
+                (AppMultiSelectListPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST);
+            mAspectRatioApps =
+                (ScrollAppsViewPreference) findPreference(KEY_ASPECT_RATIO_APPS_LIST_SCROLLER);
+            final String valuesString = Settings.System.getString(getContentResolver(),
+                Settings.System.ASPECT_RATIO_APPS_LIST);
+            List<String> valuesList = new ArrayList<String>();
+            if (!TextUtils.isEmpty(valuesString)) {
+                valuesList.addAll(Arrays.asList(valuesString.split(":")));
+                mAspectRatioApps.setVisible(true);
+                mAspectRatioApps.setValues(valuesList);
+            } else {
+                mAspectRatioApps.setVisible(false);
+            }
+            mAspectRatioAppsSelect.setValues(valuesList);
+            mAspectRatioAppsSelect.setOnPreferenceChangeListener(this);
+        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (PREF_ADBLOCK.equals(preference.getKey())) {
-            // Flush the java VM DNS cache to re-read the hosts file.
-            // Delay to ensure the value is persisted before we refresh
-            mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        InetAddress.clearDnsCache();
-                    }
-            }, 1000);
+        if (preference == mAspectRatioAppsSelect) {
+            Collection<String> valueList = (Collection<String>) newValue;
+            mAspectRatioApps.setVisible(false);
+            if (valueList != null) {
+                Settings.System.putString(getContentResolver(),
+                    Settings.System.ASPECT_RATIO_APPS_LIST, TextUtils.join(":", valueList));
+                mAspectRatioApps.setVisible(true);
+                mAspectRatioApps.setValues(valueList);
+            } else {
+                Settings.System.putString(getContentResolver(),
+                    Settings.System.ASPECT_RATIO_APPS_LIST, "");
+            }
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     @Override
