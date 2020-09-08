@@ -16,6 +16,8 @@
 
 package com.exui.config.center.utils;
 
+import static android.os.UserHandle.USER_SYSTEM;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -24,6 +26,9 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
+import android.content.om.IOverlayManager;
+import android.os.AsyncTask;
+import android.os.RemoteException;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
@@ -37,6 +42,7 @@ import android.util.DisplayMetrics;
 import android.view.DisplayInfo;
 import android.view.Surface;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public final class Utils {
     private static final String TAG = "ConfigCenterUtils";
@@ -56,6 +62,15 @@ public final class Utils {
         TelephonyManager telephony =
                 (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return telephony != null && telephony.isVoiceCapable();
+    }
+
+
+    public static void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
+        try {
+            mOverlayManager.setEnabled(packagename, state, USER_SYSTEM);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean isWifiOnly(Context context) {
