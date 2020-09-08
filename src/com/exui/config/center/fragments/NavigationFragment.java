@@ -23,6 +23,8 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import androidx.preference.*;
+import android.view.ViewConfiguration;
+import com.exui.config.center.preferences.CustomSeekBarPreference;
 
 import com.android.internal.logging.nano.MetricsProto; 
 
@@ -38,7 +40,9 @@ public class NavigationFragment extends SettingsPreferenceFragment
     private static final String NAV_BAR_LAYOUT = "nav_bar_layout";
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
+    private static final String KEY_SCREENSHOT_DELAY = "screenshot_delay";
 
+    private CustomSeekBarPreference mScreenshotDelay;
     private ListPreference mNavBarLayout;
     private ContentResolver mResolver;
     private SwitchPreference mTorchPowerButton;
@@ -64,6 +68,10 @@ public class NavigationFragment extends SettingsPreferenceFragment
                 Settings.Secure.TORCH_POWER_BUTTON_GESTURE, 0) != 0;
         mTorchPowerButton.setOnPreferenceChangeListener(this);
         mTorchPowerButton.setChecked(mTorchPowerButtonValue);
+
+        mScreenshotDelay = (CustomSeekBarPreference) findPreference(KEY_SCREENSHOT_DELAY);
+        int delay = (int) ViewConfiguration.get(getActivity()).getScreenshotChordKeyTimeout();
+        mScreenshotDelay.setDefaultValue(delay);
     }
 
     @Override

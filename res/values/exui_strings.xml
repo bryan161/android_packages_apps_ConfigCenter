@@ -659,4 +659,8 @@
     <string name="switch_stockish">Stockish</string>
     <string name="switch_fluid">Fluid</string>
 
+    <!-- Screenshot delay  -->
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Delay before actual screenshot via volume keys</string>
+
 </resources>
