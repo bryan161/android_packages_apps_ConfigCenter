@@ -24,7 +24,7 @@
         android:title="@string/themes_baseless_accusations" >
 
         <ListPreference
-            android:layout="@layout/accents_shapes_base_preview"
+            android:key="switch_preview"
             android:selectable="false" />
 
         <ListPreference

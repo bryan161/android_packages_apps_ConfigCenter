@@ -23,23 +23,43 @@ import androidx.preference.*;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.os.Bundle;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.os.UserHandle;
+import android.content.ContentResolver;
+import android.content.res.Resources;
+import android.provider.SearchIndexableResource;
+import android.provider.Settings;
+
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.display.NightModePreferenceController;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.display.OverlayCategoryPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import android.util.Log;
 
 import com.exui.config.center.display.AccentColorPreferenceController;
 import com.android.settings.R;
+import com.android.internal.util.exui.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collections;
 
 public class ThemeEngineFragment extends DashboardFragment {
     private static final String TAG = "ThemeEngineFragment";
 
     private ContentResolver mResolver;
+
+    private static final String PREF_PREVIEW = "switch_preview";
+
+    ListPreference mPreview;
 
     @Override
     public int getMetricsCategory() {
@@ -49,6 +69,25 @@ public class ThemeEngineFragment extends DashboardFragment {
     @Override
     protected String getLogTag() {
         return TAG;
+    }
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mPreview = findPreference(PREF_PREVIEW);
+
+        if (Utils.isThemeEnabled("com.android.system.switch.stock")) {
+            mPreview.setLayoutResource(R.layout.accents_shapes_base_preview_stock);
+        } else if (Utils.isThemeEnabled("com.android.system.switch.oneplus")) {
+            mPreview.setLayoutResource(R.layout.accents_shapes_base_preview_oos);
+        } else if (Utils.isThemeEnabled("com.android.system.switch.fluid")) {
+            mPreview.setLayoutResource(R.layout.accents_shapes_base_preview);
+        } else {
+            mPreview.setLayoutResource(R.layout.accents_shapes_base_preview_stock);
+        }
     }
 
     @Override
