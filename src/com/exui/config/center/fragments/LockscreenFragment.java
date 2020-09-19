@@ -27,7 +27,7 @@ import android.hardware.fingerprint.FingerprintManager;
 import com.exui.config.center.lockscreen.LockScreenVisualizer;
 import com.android.internal.widget.LockPatternUtils;
 
-import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -38,11 +38,13 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
     public static final String TAG = "LockscreenFragment";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FP_ERROR_VIBRATE = "fp_error_vibrate";
     private static final String FP_KEYSTORE = "fp_unlock_keystore";
 
     private ContentResolver mResolver;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFingerprintVibErr;
     private SystemSettingSwitchPreference mFingerprintUnlock;
 
     @Override
@@ -68,8 +70,10 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFingerprintVibErr = (SwitchPreference) findPreference(FP_ERROR_VIBRATE);
         if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
+            prefScreen.removePreference(mFingerprintVibErr);
         } else {
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
@@ -94,6 +98,12 @@ public class LockscreenFragment extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+        }
+        if (preference == mFingerprintVibErr) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FP_ERROR_VIBRATE, value ? 1 : 0);
             return true;
         }
         return false;
