@@ -331,6 +331,7 @@
     <string name="fod_recog_animation_rogpulsar">ROG Pulsar</string>
     <string name="fod_recog_animation_rogsupernova">ROG Supernova</string>
     <string name="fod_recog_animation_vivoendless">Vivo Endless</string>
+    <string name="fod_recog_animation_xiaomi_minimal">Xiaomi Minimal</string>
 
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>

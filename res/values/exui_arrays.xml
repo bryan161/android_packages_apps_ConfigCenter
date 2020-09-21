@@ -311,6 +311,7 @@
         <item>@string/fod_recog_animation_rogpulsar</item>
         <item>@string/fod_recog_animation_rogsupernova</item>
         <item>@string/fod_recog_animation_vivoendless</item>
+        <item>@string/fod_recog_animation_xiaomi_minimal</item>
     </string-array>
 
     <string-array name="fod_recog_animation_values" translatable="false">
@@ -346,6 +347,7 @@
         <item>30</item>
         <item>31</item>
         <item>28</item>
+        <item>32</item>
     </string-array>
 
     <!-- Battery bar -->
